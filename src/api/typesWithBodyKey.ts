@@ -14759,6 +14759,18 @@ export interface MlUpdateModelSnapshotResponse {
   model: MlModelSnapshot
 }
 
+export interface MlUpdateTrainedModelDeploymentRequest extends RequestBase {
+  model_id: Id
+  /** @deprecated The use of the 'body' key has been deprecated, move the nested keys to the top level object. */
+  body?: {
+    number_of_allocations?: integer
+  }
+}
+
+export interface MlUpdateTrainedModelDeploymentResponse {
+  assignment: MlTrainedModelAssignment
+}
+
 export interface MlUpgradeJobSnapshotRequest extends RequestBase {
   job_id: Id
   snapshot_id: Id
